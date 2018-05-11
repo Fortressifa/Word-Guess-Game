@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+<!-- word to be found database -->
+<script type="text/javascript">
+var hiddenword1 = ["f", "a", "l", "c", "o", "n"]
+
+var hiddenword2 = ["y", "o", "d", "a"]
+
+var hiddenword3 = ["d", "r", "o", "i", "d"]
+
+var guesses = 0
+
+var badShitHappens = new Audio('Assets/sense_fear.wav')
+var goodShitHappens = new Audio('Assets/use_the_force.wav')
+var guessesleft = ['Assets/Images/IMG_1.png', 'Assets/Images/IMG_2.png', 'Assets/Images/IMG_3.png','Assets/Images/IMG_4.png','Assets/Images/IMG_5.png','Assets/Images/IMG_6.png','Assets/Images/IMG_7.png','Assets/Images/IMG_8.png','Assets/Images/IMG_9.png','Assets/Images/IMG_10.png','Assets/Images/IMG_11.png']
+
+// <!-- I feel like this is somehow meant ot be an object and when it checks the word it does so by splitting the string or spmething like that -->
+console.log(hiddenword1[0])
+
+
+// MAIN PROCESS
+// ==============================================================================
+
+// <!-- // Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions. -->
+document.onkeyup = function(event) {
+
+  // <!-- // Captures the key press, converts it to lowercase, and saves it to a variable. -->
+  var userGuess = event.key.toLowerCase();
+
+  // <!-- if  (userGuess === hiddenword1[0]) || 
+  //     (userGuess === hiddenword1[1]) ||
+  //     (userGuess === hiddenword1[2]) ||
+  //     (userGuess === hiddenword1[3]) ||
+  //     (userGuess === hiddenword1[4]) ||
+  //     (userGuess === hiddenword1[5])   {
+  //       losses++;
+  //     } else {
+  //       ties++;
+  //     }
+
+  
+  //   } -->
+
+
+    // <!-- or is it something like this? -->
+
+    // <!-- // Logs the index position for bear. Since bear isn't in the array, -1 is logged. -->
+    // console.log(hiddenword1.indexOf(userGuess));
+
+    // // <!-- // Logs the index position for parrot, which is 0. -->
+    // console.log(hiddenword1.indexOf(userGuess));
+
+  
+//   <!-- // If the letter is h, run the following functions/methods.
+//   if (letter === "h") {
+//     car.honk();
+//     reWriteStats();
+//   }
+
+//   // If the letter is d, run the following functions/methods.
+//   if (letter === "d") {
+//     car.driveToWork();
+//     reWriteStats();
+//   }
+
+//   // If the letter is w, run the following functions/methods.
+//   if (letter === "w") {
+//     car.driveAroundWorld();
+//     reWriteStats();
+//   }
+
+//   // If the letter is t, run the following functions/methods.
+//   if (letter === "t") {
+//     car.getTuneUp();
+//     reWriteStats();
+//   }
+// }; -->
+
+
+
+
+
+// <!-- // This function is run whenever the user presses a key. -->
+// document.onkeyup = function(event) {
+// <!-- 
+//   // Determines which key was pressed. -->
+  // var userGuess = event.key.toLowerCase();
+
+
+// <!-- compare the value of the keypress to the the word being guessed -->
+
+- // Logs the index position for userGuess. If userGuess isn't in the array, -1 is logged. -->
+console.log(hiddenword1.indexOf(userGuess))    
+
+if ((hiddenword1.indexOf(userGuess)) === -1) {
+//     <!-- then bad shit happens -->
+// <!-- if the userGuess is not one of the letters then recors a loss by running some darkside of the force audio and the first image of the Hangman -->
+    alert("Bad Shit will happen");
+    badShitHappens.play();
+    guesses++;
+    return(userGuess)
+//    some piece of code that will pull the img files sequentially with each incorrect guess
+    }
+   
+   
+   
+   
+    // // Theme Button
+    // $("#musicControls").on("click", ".theme-button", function() {
+    //   audioElement.play();
+    // }).on("click", ".pause-button", function() {
+    //   audioElement.pause();
+    // });
+
+
+
+
+   
+    
+
+
+
+
+    else {
+      alert("Good shit happens.");
+      goodShitHappens.play();
+    }}
+
+
+//     <!-- good shit happens -->
+//     <!-- if the userGuess is one of the letters then record a yes or a patial win and reveal the letter wherever it is in the word
+// request new guess without recording a miss -->
+
+    // Logs the index position for parrot, which is 0.
+    // console.log(hiddenword1.indexOf(userGuess));
+
+// <!-- the word being guessed should be in an array with each letter being a sub of the inddex -->
+
+
+
+
+
+
+
+
+
+
+// <!-- loop through until you have guessed the full word or you have hung skywalker -->
+
+
+
+// <!-- each fail should advance through to the next iteritive drawing -->
+
+
+
+// <!-- At the end of the game play the audio or video of yoda saying..there is another then cyle to game back to a new word, clearing the previous images -->
+
+</script>
+
+<body>
+    <h1>Welcome to Star Wars Themed Hangman!</h1>
+
+    <p>Choose any letter to start - May the force be with you!</p>
+
+
+
+
+</body>
+</html>
